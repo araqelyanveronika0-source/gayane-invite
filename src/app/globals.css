@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: #fff9f2;
+  color: #60452e;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .gold-text {
+    background: linear-gradient(120deg, #8f6f35 0%, #d8b878 45%, #b89456 70%, #8f6f35 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glass {
+    background: rgba(255, 249, 242, 0.72);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(184, 148, 86, 0.28);
+  }
+  .gold-frame {
+    border: 1px solid #b89456;
+    box-shadow: inset 0 0 0 5px #fff9f2, inset 0 0 0 6px rgba(184, 148, 86, 0.6);
+  }
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-base font-semibold text-ivory shadow-soft transition active:scale-95;
+    background: linear-gradient(135deg, #b89456, #d3b47a 50%, #b89456);
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-gold px-6 py-3 text-base font-medium text-brown transition active:scale-95 hover:bg-champagne/40;
+  }
+  .field {
+    @apply w-full rounded-2xl border border-champagne bg-white/80 px-4 py-3 text-base text-brown outline-none transition placeholder:text-brown/40 focus:border-gold focus:ring-2 focus:ring-gold/30;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
