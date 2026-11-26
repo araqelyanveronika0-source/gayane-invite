@@ -3,10 +3,6 @@
 import { useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-/**
- * Երաժշտությունը երբեք ավտոմատ չի միանում։
- * Տեղադրեք Ձեր instrumental ֆայլը՝ public/music/invitation.mp3
- */
 export default function MusicToggle() {
   const ref = useRef<HTMLAudioElement>(null);
   const [on, setOn] = useState(false);
@@ -31,7 +27,7 @@ export default function MusicToggle() {
 
   return (
     <>
-      <audio ref={ref} src=/invitation.mp3" loop preload="none" onError={() => setMissing(true)} />
+      <audio ref={ref} src="/invitation.mp3" loop preload="none" onError={() => setMissing(true)} />
       <button
         type="button"
         onClick={toggle}
