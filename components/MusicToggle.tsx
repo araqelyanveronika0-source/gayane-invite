@@ -31,7 +31,7 @@ export default function MusicToggle() {
 
   return (
     <>
-      <audio ref={ref} src="/music/invitation.mp3" loop preload="none" onError={() => setMissing(true)} />
+      <audio ref={ref} src=/invitation.mp3" loop preload="none" onError={() => setMissing(true)} />
       <button
         type="button"
         onClick={toggle}
